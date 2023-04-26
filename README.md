@@ -70,7 +70,7 @@ Step 5: access the nodejs application from browser
 The dot "." at the end of the command denotes location of the Dockerfile.
 
 ### Extra(to connect with AWS ECR repo)
-In windows CMD prompt(no powershell) set the variable: docker-registry="account-number".dkr.ecr.us-east-1.amazonaws.com #you get this value after you've pushed the image on ECR
+In windows CMD prompt(no powershell) set the variable: docker-registry=\<account-number>.dkr.ecr.us-east-1.amazonaws.com #you get this value after you've pushed the image on ECR
 
 Example commands:
 <pre>
@@ -80,9 +80,9 @@ aws ecr get-login-password --region us-east-1 | docker login --username AWS --pa
 #create the image
 docker build -t my-app:1.0 .
 #rename the image for AWS
-docker tag my-app:1.0 "account-number".dkr.ecr.us-east-1.amazonaws.com/my-app:1.0
+docker tag my-app:1.0 \<account-number>.dkr.ecr.us-east-1.amazonaws.com/my-app:1.0
 #push the image on AWS ECR
-docker push "account-number".dkr.ecr.us-east-1.amazonaws.com/my-app:1.0
+docker push \<account-number>.dkr.ecr.us-east-1.amazonaws.com/my-app:1.0
 </pre>
 
 I've added the env folder as reference in case I have to add more environment variables
