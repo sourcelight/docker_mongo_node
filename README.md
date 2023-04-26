@@ -69,7 +69,7 @@ Step 5: access the nodejs application from browser
     
 The dot "." at the end of the command denotes location of the Dockerfile.
 
-#### Extra
+### Extra(to connect with AWS ECR repo)
 In windows CMD prompt(no powershell) set the variable: docker-registry="account-number".dkr.ecr.us-east-1.amazonaws.com #you get this value after you've pushed the image on ECR
 
 Example commands:
